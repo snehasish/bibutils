@@ -1,0 +1,2 @@
+bibutils
+bibtexparser>=0.6.2
