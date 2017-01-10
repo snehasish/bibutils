@@ -15,10 +15,12 @@ def main(bibs):
                 s = '<span class="myname">Snehasish Kumar</span>'
             auth_str += s 
             flag = True
-        print '<span class="pub-author">', auth_str, '</span> <br/>'
+        print '<span class="pub-author">', auth_str, '</span>'
         if 'booktitle' in p.keys(): 
-            print '<span class="pub-booktitle">', p['booktitle'], '</span> <br/>'
-        print '<span class="pub-year">', p['year'], '</span>'
+            print '<br/> <span class="pub-booktitle">', p['booktitle'], '</span>'
+        if 'note' in p.keys():
+            print '<span class="pub-rate"> ( Acceptance rate = ', p['note'].replace('\\','').strip(),')</span>'
+        print '<br/> <span class="pub-year">', p['year'], '</span>'
         # print p.keys()
         if 'link' in p.keys():
             print '<span class="pub-url"><a  target="_blank" href="', p['link'], '">[url]</a></span>'
